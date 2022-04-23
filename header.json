@@ -1,6 +1,42 @@
 {
-   "data_url" : "data.json",
-   "last_update" : "2019/06/01",
-   "name" : "音頭難易度表",
-   "symbol" : "℃"
+
+"name":"第2発狂難易度",
+"tag":"▼",
+"data_url":"http://rattoto10.jounin.jp/js/insane_data.json",
+"symbol":"▼",
+"level_order":["0-","0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","?"],
+"course":[
+	[
+		{
+			"name":"発狂初段",
+			"constraint":["grade_mirror"],
+			"trophy":[
+				{
+					"name":"silvermedal",
+					"missrate":5.0,
+					"scorerate":70.0
+				},
+				{
+					"name":"goldmedal",
+					"missrate":2.5,
+					"scorerate":85.0
+				}
+			],
+			"md5":[
+				"c07125de4ed7fbe7cb066cc41e50e51e",
+				"fc7d46e7bbc9f6afd26d05e3bf2ef555",
+				"b3887714270e28988ce900e4b9300994",
+				"d1877ad5dc0134b27eb0238da5721eed"
+			]
+		},
+		.
+		.
+		.			
+	],
+	[
+		.
+		.
+		.
+	]
+]
 }
