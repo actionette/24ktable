@@ -1,22 +1,26 @@
-[  
-  {
-    "artist": "ルゼ",
-    "comment": "はやすぎる",
-    "level": "許されない",
-    "name_diff": "？",
-    "title": "音頭歌「オルグラリヤ」",
-    "url": "http://www.luzeria.net/music/39_ikusauta_orglry_ogg.rar",
-    "url_diff": "https://kju8.github.io/ondo_table/chart/ikusauta_orglry/02_deathcore_7ondoh_bga.bme"
-  },
-  {
-    "artist": "off-beat",
-    "comment": "10倍",
-    "level": "許されない",
-    "lr2_bmsid": "14786",
-    "md5": "255d32530c8571328586cafd48813088",
-    "name_diff": "無意味さん",
-    "title": "850",
-    "url": "https://web.archive.org/web/20021122161203/http://isweb16.infoseek.co.jp/art/s_kawa/data2/bms_517.rar",
-    "url_diff": "http://slap-stick.s17.xrea.com/850.zip"
-  }
+[
+    {
+        "title":"Act Beloved [SP ★1]",
+        "level":"12",
+        "eval":0,
+        "artist":"Nene Anegasaki feat. Salita / obj:slash Movie : Ryuka",
+        "url":"http://manbow.nothing.sh/event/event.cgi?action=More_def&num=268&event=74",
+        "url_pack":"http://nekokan.dyndns.info/~lobsak/genoside/",
+        "name_pack":"GENOSIDE収録",
+        "url_diff":"http://slash24th.web.fc2.com/",
+        "name_diff":"差分保管所",
+        "comment":"slash難易度表△1",
+        "total":480.0,
+        "judge":3,
+        "note":(省略),
+        "tag":"同時押し",
+        "md5":"6a2cf3b81a38dc28f2a5b4e0d18d26ff"
+    },
+    {...},
+    {...},
+    {...},
+            .
+            .
+            .
+    {...}
 ]
