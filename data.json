@@ -1,36 +1,16 @@
 [
-    {
-        "title":"Act Beloved [SP ★1]",
-        "level":"12",
-        "eval":0,
-        "artist":"Nene Anegasaki feat. Salita / obj:slash Movie : Ryuka",
-        "url":"http://manbow.nothing.sh/event/event.cgi?action=More_def&num=268&event=74",
-        "url_pack":"http://nekokan.dyndns.info/~lobsak/genoside/",
-        "name_pack":"GENOSIDE収録",
-        "url_diff":"http://slash24th.web.fc2.com/",
-        "name_diff":"差分保管所",
-        "comment":"slash難易度表△1",
-        "total":480.0,
-        "judge":3,
-        "note":(省略),
-        "tag":"同時押し",
-        "md5":"6a2cf3b81a38dc28f2a5b4e0d18d26ff"
-    },
-    {
-        "title":"Act Beloved [SP ★1]",
-        "level":"12",
-        "eval":0,
-        "artist":"Nene Anegasaki feat. Salita / obj:slash Movie : Ryuka",
-        "url":"http://manbow.nothing.sh/event/event.cgi?action=More_def&num=268&event=74",
-        "url_pack":"http://nekokan.dyndns.info/~lobsak/genoside/",
-        "name_pack":"GENOSIDE収録",
-        "url_diff":"http://slash24th.web.fc2.com/",
-        "name_diff":"差分保管所",
-        "comment":"slash難易度表△1",
-        "total":480.0,
-        "judge":3,
-        "note":(省略),
-        "tag":"同時押し",
-        "md5":"6a2cf3b81a38dc28f2a5b4e0d18d26ff"
-    }
+  {
+    "md5": "934bfcf826757f6c0fa9dd44b3c885d6",
+    "org_level": null,
+    "title": "秩序の秋桜",
+    "artist": "くっちー",
+    "folder": "LEVEL1",
+    "level": "LEVEL1",
+    "lr2_bmsid": null,
+    "url": "https://www.dropbox.com/sh/bd0nuctv0je6hwi/AAAYXReWIjssla9OzlIe2EZVa?dl=0",
+    "url_diff": "	https://www.dropbox.com/s/4prx3z5xh8skz1f/%5B24key%5D%20%E7%A7%A9%E5%BA%8F%E3%81%AE%E7%A7%8B%E6%A1%9C.zip?dl=0",
+    "name_diff": null,
+    "comment": "test",
+    "adddate": "4\/23\/2022"
+  }
 ]
