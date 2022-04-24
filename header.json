@@ -2,9 +2,12 @@
   "name": "24kNormal",
   "symbol": "б",
   "level_order": [
-    "LEVEL1"
+    ""
   ],
-  "folder_order": [ ],
+  "folder_order": [
+    "LEVEL 1",
+    "LEVEL 2"   
+  ],
   "folder_sort_key": "",
   "folder_sort_ascending": true,
   "entry_type": "",
