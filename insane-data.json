@@ -16,20 +16,20 @@
     "update": "2022-04-24"
   },
   {
-    "level": "8",
-    "sha256": "99fa19224e20e492d426767878f726d387ea1e477b0620f1a8b9d2a0f5adc2b4",
-    "title": "ミルキーベリー・スウィートタイム [24key]",
-    "artist": "ぽんきち",
-    "chart": "exclusion",
-    "url": "http://manbow.nothing.sh/event/event.cgi?action=More_def&num=107&event=104",
+    "level": "?",
+    "sha256": "20fdeb1a8de4ad093b5a8aeb0f0ca481e456f6a22c017646305b9a6ecb166c90",
+    "title": "Icarus III [24k Virtuoso]",
+    "artist": "AcTioneer231",
+    "chart": "actionette",
+    "url": "https://www.dropbox.com/s/zf9x819f6d7h91x/%5B24key%5D%20Icarus%20III.zip?dl=0",
     "tags": [
 
     ],
-    "url_diff": "https://excln.github.io/sabun/24key/ミルキーベリー・スウィートタイム.zip",
+    "url_diff": "https://www.dropbox.com/s/zf9x819f6d7h91x/%5B24key%5D%20Icarus%20III.zip?dl=0",
     "transpose": 0,
-    "notes": 729,
+    "notes": 4382,
     "comment": "",
-    "update": "2021-08-10"
+    "update": "2022-04-24"
   },
   {
     "level": "6",
