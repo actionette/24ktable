@@ -1,9 +1,9 @@
 {
-  "name": "24k Normal",
-  "Symbol": "б",
-  "data_url": "data.json",
+  "name": "24k Test",
+  "Symbol": "x",
+  "data_url": "https://actionette.github.io/24ktable/data.json",
   "tag": "24k",
   "mode": "keyboard-24k",
   "level_order": ["1","2"],
-  "update:": "2022-04-23"
+  "update:":"2022-04-23"
 }
