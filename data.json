@@ -1,11 +1,12 @@
-{
-  "level": "1",
-  "sha256": "36334b13a68cd8e0181f7fe1d79f44e3f995032511a66f839e3f1e1dd09f993c",
-  "title": "秩序の秋桜 [24 Hyper]",
-  "artist": "くっちー",
-  "chart": "actionette",
-  "url": "https://manbow.nothing.sh/event/event.cgi?action=More_def&num=111&event=74",
-  "tags": [
-  
-  ], 
-}
+[
+  {
+    "level": "1",
+    "sha256": "36334b13a68cd8e0181f7fe1d79f44e3f995032511a66f839e3f1e1dd09f993c",
+    "title": "秩序の秋桜 [24 Hyper]",
+    "artist": "くっちー",
+    "chart": "actionette",
+    "url": "https://manbow.nothing.sh/event/event.cgi?action=More_def&num=111&event=74",
+    "tags": [
+    ], 
+  }
+]
