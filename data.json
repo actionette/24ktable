@@ -16,7 +16,8 @@
         "tag":"同時押し",
         "md5":"6a2cf3b81a38dc28f2a5b4e0d18d26ff"
     },
-    {"title":"Act Beloved [SP ★1]",
+    {
+        "title":"Act Beloved [SP ★1]",
         "level":"12",
         "eval":0,
         "artist":"Nene Anegasaki feat. Salita / obj:slash Movie : Ryuka",
@@ -30,5 +31,6 @@
         "judge":3,
         "note":(省略),
         "tag":"同時押し",
-        "md5":"6a2cf3b81a38dc28f2a5b4e0d18d26ff"}
+        "md5":"6a2cf3b81a38dc28f2a5b4e0d18d26ff"
+    }
 ]
