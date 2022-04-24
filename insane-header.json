@@ -306,8 +306,68 @@
 				}
 			]
 		},
-    {
+		{
 			"name":"24K段位認定 発狂皆伝",
+			"constraint": ["grade_mirror", "gauge_24k"],
+			"tropy": [
+				{
+					"name":"silvermedal",
+					"missrate":5.0,
+					"scorerate":70.0
+				},
+				{
+					"name":"goldmedal",
+					"missrate":2.5,
+					"scorerate":85.0
+				}
+			],
+			"charts": [
+				{
+					"sha256": "367862f242b0f25ff19180cbe1f648d8cacd0b94094df842977e7a3be2e50622"
+				},
+				{
+					"sha256": "72e5ae69c3ce8b3fdf341d03d95f723a2aeb3195f945b6dfa9cbe37043fd0234"
+				},
+				{
+					"sha256": "0b65c3440266e5df31a11322cb9d9c2a0d088cd98922dea65096e3004427c0a4"
+				},
+				{
+					"sha256": "bc37eebb8202df8c2e9116bf8d1bd967cd59bbc9fcd56915fa162c349c1f938d"
+				}
+			]
+		},
+		{
+			"name":"24K段位認定 Overjoy",
+			"constraint": ["grade_mirror", "gauge_24k"],
+			"tropy": [
+				{
+					"name":"silvermedal",
+					"missrate":5.0,
+					"scorerate":70.0
+				},
+				{
+					"name":"goldmedal",
+					"missrate":2.5,
+					"scorerate":85.0
+				}
+			],
+			"charts": [
+				{
+					"sha256": "c2d70ad9f7fd34401743ed0b6d928c0c2768ec2094da5daf51a7fc264b108c98"
+				},
+				{
+					"sha256": "367862f242b0f25ff19180cbe1f648d8cacd0b94094df842977e7a3be2e50622"
+				},
+				{
+					"sha256": "66b9429206734b5d06df2664b76aba45b3f0ff7ee817ff5eb9778d31b6aa441b"
+				},
+				{
+					"sha256": "61f1a520782e8ee2972fa4b1d0607e90480b9ede5790a285b698122366a6ab91"
+				}
+			]
+		},
+		{
+			"name":"24K Virtuoso",
 			"constraint": ["grade_mirror", "gauge_24k"],
 			"tropy": [
 				{
@@ -326,66 +386,6 @@
 					"sha256": "da1364802abe19796679c457ca3bfa9851575281af42a66ab7722717d83737c0"
 				},
 				{
-					"sha256": "367862f242b0f25ff19180cbe1f648d8cacd0b94094df842977e7a3be2e50622"
-				},
-				{
-					"sha256": "063c32d35cd9258f4a230839e41cce541f055afa9a925debe5dde2e4cc5583ea"
-				},
-				{
-					"sha256": "31f8cede4b5b3dd2d99f2e60d3e9a070ac6fadaaf8d826300addc5a9493a6b82"
-				}
-      ]
-    },
-    {
-			"name":"24K段位認定 Overjoy",
-			"constraint": ["grade_mirror", "gauge_24k"],
-			"tropy": [
-				{
-					"name":"silvermedal",
-					"missrate":5.0,
-					"scorerate":70.0
-				},
-				{
-					"name":"goldmedal",
-					"missrate":2.5,
-					"scorerate":85.0
-				}
-			],
-			"charts": [
-				{
-					"sha256": "367862f242b0f25ff19180cbe1f648d8cacd0b94094df842977e7a3be2e50622"
-				},
-				{
-					"sha256": "565d606bf8e59f5fbb85107135532dd61276f8a83dc76b50e4ff44f625d6a7ae"
-				},
-				{
-					"sha256": "063c32d35cd9258f4a230839e41cce541f055afa9a925debe5dde2e4cc5583ea"
-				},
-				{
-					"sha256": "31f8cede4b5b3dd2d99f2e60d3e9a070ac6fadaaf8d826300addc5a9493a6b82"
-				}
-      ]
-    },
-        {
-			"name":"24K Virtuoso",
-			"constraint": ["grade_mirror", "gauge_24k"],
-			"tropy": [
-				{
-					"name":"silvermedal",
-					"missrate":5.0,
-					"scorerate":70.0
-				},
-				{
-					"name":"goldmedal",
-					"missrate":2.5,
-					"scorerate":85.0
-				}
-			],
-			"charts": [
-				{
-					"sha256": "367862f242b0f25ff19180cbe1f648d8cacd0b94094df842977e7a3be2e50622"
-				},
-				{
 					"sha256": "565d606bf8e59f5fbb85107135532dd61276f8a83dc76b50e4ff44f625d6a7ae"
 				},
 				{
@@ -394,8 +394,8 @@
 				{
 					"sha256": "31f8cede4b5b3dd2d99f2e60d3e9a070ac6fadaaf8d826300addc5a9493a6b82"
 				}
-      ]
-    }
+			]
+		}
 	],
 	"update":"2022-04-23"
 }
