@@ -68,13 +68,13 @@
                     responsiveLayout:"collapse",
                     responsiveLayoutCollapseStartOpen:false,
                     groupHeader: function(value, count, data, group){
-                        return `<span>${header.symbol}${value} (${count} Songs)</span>`;
+                        return `<span>${insane-header.symbol}${value} (${count} Songs)</span>`;
                     },
                     columns: [
                         {formatter:"responsiveCollapse", field:"collapse", width:30, minWidth:30, align:"center", resizable:false, headerSort:false},
                         { title: "Level", field: "level", width: 100, resizable: false,
                             formatter: function(cell, formatterParams, onRendered) {
-                                return header.symbol + cell.getValue();
+                                return insane-header.symbol + cell.getValue();
                             },
                             sorter:function(a, b, aRow, bRow, column, dir, sorterParams){
                                 if(isNaN(a)) return 1;
