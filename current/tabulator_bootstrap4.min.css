@@ -792,8 +792,8 @@
     vertical-align: middle
 }
 .tabulator-row.tabulator-group span {
-    margin-left: 10px;
-    color: #666
+    margin-left: 100px;
+    color: #C6B8D9
 }
 .tabulator-edit-select-list {
     position: absolute;
