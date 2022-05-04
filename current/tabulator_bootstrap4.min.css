@@ -171,13 +171,13 @@
 .tabulator .tabulator-header .tabulator-calcs-holder {
     box-sizing: border-box;
     width: 100%;
-    background: #fff !important;
+    background: #002349 !important;
     border-top: 1px solid #dee2e6;
     border-bottom: 1px solid #dee2e6;
     overflow: hidden
 }
 .tabulator .tabulator-header .tabulator-calcs-holder .tabulator-row {
-    background: #fff !important
+    background: #002349 !important
 }
 .tabulator .tabulator-header .tabulator-calcs-holder .tabulator-row .tabulator-col-resize-handle {
     display: none
