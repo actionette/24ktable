@@ -83,7 +83,7 @@
                                 return a - b;
                             },
                         },
-                        { title: "Name", field: "title", minWidth: 1, headerSort:false, resizable: false, variableHeight:true,
+                        { title: "Name", field: "title", minWidth: 1, headerSort:true, resizable: false, variableHeight:true,
                             formatter: function(cell, formatterParams, onRendered) {
                                 cell.getElement().style.whiteSpace = "pre-wrap";
                                 const value = cell.getValue();
@@ -116,7 +116,15 @@
                                 return value;
                             },
                         },
-                        { title: "Comment", field: "comment", width:400, minWidth: 400, headerSort:false, resizable: false, formatter: "html"},
+                        { title: "Comment", field: "comment", width:400, minWidth: 400, headerSort:false, resizable: false, 
+                          formatter: function(cell, formatterParams, onRendered) {
+                                cell.getElement().style.whiteSpace = "pre-wrap";
+                                const value = cell.getValue();
+                                const data = cell.getRow().getData();
+                                const url = data.url_diff;
+                                return value;
+                            },
+                        },
                         { title: "Original Title", field: "original_title", minWidth: 10000, headerSort:false, resizable: false},
                         { title: "BPM Ratio", field: "bpm_ratio", minWidth: 10000, headerSort:false, resizable: false},
                     ],
