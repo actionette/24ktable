@@ -1635,7 +1635,7 @@ select.form-control:focus::-ms-value {
     padding-bottom: .375rem;
     margin-bottom: 0;
     line-height: 1.5;
-    color: #212529;
+    color: #C6B8D9;
     background-color: transparent;
     border: solid transparent;
     border-width: 1px 0
@@ -2132,7 +2132,6 @@ a.btn.disabled, fieldset:disabled a.btn {
     box-shadow: 0 0 0 .2rem rgba(222, 170, 12, .5)
 }
 .btn-danger {
-    color: #fff;
     background-color: #dc3545;
     border-color: #dc3545
 }
