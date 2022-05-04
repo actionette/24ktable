@@ -126,7 +126,7 @@
                         },
                         { title: "Original Title", field: "original_title", minWidth: 10000, headerSort:false, resizable: false},
                         { title: "BPM Ratio", field: "bpm_ratio", minWidth: 10000, headerSort:false, resizable: false},
-                        { title: "Comment", field: "html_comment", minWidth: 100, headerSort:false, resizable: false, 
+                        { title: "Comment", field: "comment", minWidth: 100, headerSort:false, resizable: false, 
                          formatter: function(cell, formatterParams, onRendered) {
                                 cell.getElement().style.whiteSpace = "pre-wrap";
                                 const value = cell.getValue();
@@ -197,4 +197,3 @@
         });
     </script>
 </html>
-
