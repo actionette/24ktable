@@ -792,7 +792,7 @@
     vertical-align: middle
 }
 .tabulator-row.tabulator-group span {
-    margin-left: 100px;
+    margin-left: 10px;
     color: #C6B8D9
 }
 .tabulator-edit-select-list {
