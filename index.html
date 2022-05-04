@@ -37,14 +37,6 @@
         <div class="container">
             <div id="table" class="table-sm table-bordered"></div>
         </div>
-        <style>
-            body {
-                background-image: url('https://actionette.github.io/24ktable/test.png');
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: cover;
-            }
-        </style>
     </body>
 
     <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.2.4/dist/js/tabulator.min.js" ></script>
@@ -112,7 +104,7 @@
                                 return value;
                             },
                         },
-                        { title: "Difficulty", field: "name_diff", minWidth: 100, headerSort:false, resizable: false,
+                        { title: "Difficulty", field: "url", minWidth: 100, headerSort:false, resizable: false,
                             formatter: function(cell, formatterParams, onRendered) {
                                 cell.getElement().style.whiteSpace = "pre-wrap";
                                 const value = cell.getValue();
@@ -126,16 +118,7 @@
                         },
                         { title: "Original Title", field: "original_title", minWidth: 10000, headerSort:false, resizable: false},
                         { title: "BPM Ratio", field: "bpm_ratio", minWidth: 10000, headerSort:false, resizable: false},
-                        { title: "Comment", field: "comment", minWidth: 100, headerSort:false, resizable: false, 
-                         formatter: function(cell, formatterParams, onRendered) {
-                                cell.getElement().style.whiteSpace = "pre-wrap";
-                                const value = cell.getValue();
-                                const data = cell.getRow().getData();
-                                const url = data.url_diff;
-                                if(url){
-                                    return `<a href="${url}" target="_blank">${value}</a>`
-                                }
-                        },
+                        { title: "Comment", field: "html_comment", minWidth: 10000, headerSort:false, resizable: false, formatter: "html"},
                     ],
                     responsiveLayoutCollapseFormatter:function(data){
                         //data - an array of objects containing the column title and value for each cell
