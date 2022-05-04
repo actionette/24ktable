@@ -1,7 +1,7 @@
 /* Tabulator v4.2.4 (c) Oliver Folkerd */
 .tabulator {
     position: relative;
-    background-color: #001329;
+    background-color: #002349;
     overflow: hidden;
     font-size: 1rem;
     text-align: left;
@@ -750,7 +750,7 @@
     border-top: 1px solid #999;
     padding: 5px;
     padding-left: 10px;
-    background: #fafafa;
+    background: #003E59;
     font-weight: 700;
     min-width: 100%
 }
