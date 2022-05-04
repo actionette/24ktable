@@ -1,44 +1,206 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!DOCTYPE html>
 
-<script type="text/javascript" charset="utf8" src="https://actionette.github.io/24ktable/24normal/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" charset="utf8" src="https://actionette.github.io/24ktable/24normal/jquery.dataTables.min.js"></script>
-<script type="text/javascript" charset="utf8" src="https://actionette.github.io/24ktable/24normal/natural.js"></script>
-<script type="text/javascript" charset="utf8" src="https://actionette.github.io/24ktable/24normal/showtable.js"></script>
-<link rel="stylesheet" type="text/css" href="https://actionette.github.io/24ktable/24normal/jquery.dataTables.min.css">
-<!--<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/overcast/jquery-ui.css">-->
-<link rel="stylesheet" type="text/css" href="https://actionette.github.io/24ktable/24normal/table.css">
-<title>24K Normal</title>
-<meta name="bmstable" content="https://actionette.github.io/24ktable/header.json">
-</head>
-<body><div id="content">
-<h1>24K Normal</h1>
-<h2 style="text-align: right; display: none;">非公式変換 for GLAssist</h2>
-<div style="text-align: right">最終更新日: <span id="last_update">2017/02/01</span></div>
-<div style="text-align: right">作成: <a href="http://tumblr.ribbit.xyz/">Ribbit</a></div>
-<div style="text-align: right">オリジナル: <a id="original_url" href="https://actionette.github.io/24ktable/header.json">24K Normal</a></div>
-<div style="text-align: right">上記サイトの難易度表に楽曲情報を付加し非公式に変換・再構築を行っています</div>
-<div style="text-align: right">本ページの URL を登録することで難易度表フォーマットに対応したツールで管理することが出来ます</div>
-<div id="difficulty_table"><div id="table_list_wrapper" class="dataTables_wrapper no-footer">
-<div class="fg-toolbar ui-toolbar ui-widget-header ui-helper-clearfix ui-corner-tl ui-corner-tr"><div id="table_list_filter" class="dataTables_filter">
-<label>Search:<input type="search" class="" placeholder="" aria-controls="table_list">
-</label></div></div>
-<table cellpadding="0" cellspacing="0" border="0" class="compact hover stripe row-border dataTable no-footer" id="table_list" role="grid"><thead>
-<tr role="row">
-<th class="dt-center row-border tooltip-right col_level sorting ui-state-default sorting_asc" tabindex="0" aria-controls="table_list" rowspan="1" colspan="1" aria-sort="ascending" aria-label="レベル: activate to sort column descending">
-<div class="DataTables_sort_wrapper">レベル<span class="DataTables_sort_icon css_right ui-icon ui-icon-triangle-1-n"></span></div></th>
-<th class="dt-head-center compact tooltip-right sorting_disabled ui-state-default" rowspan="1" colspan="1" aria-label="タイトル">
-<div class="DataTables_sort_wrapper">タイトル<span class="DataTables_sort_icon"></span></div></th>
-<th class="dt-head-center compact tooltip-right sorting_disabled ui-state-default" rowspan="1" colspan="1" aria-label="アーティスト">
-<div class="DataTables_sort_wrapper">アーティスト<span class="DataTables_sort_icon"></span></div></th>
-<th class="dt-center compact tooltip-right col_diff_link sorting_disabled ui-state-default" rowspan="1" colspan="1" aria-label="差分">
-<div class="DataTables_sort_wrapper">差分<span class="DataTables_sort_icon"></span></div></th>
-<th class="dt-center compact tooltip-right col_score_link sorting_disabled ui-state-default" rowspan="1" colspan="1" aria-label="譜面">
-<div class="DataTables_sort_wrapper">譜面<span class="DataTables_sort_icon"></span></div></th>
-<th class="dt-head-center row-border tooltip-right col_comment sorting_disabled ui-state-default" rowspan="1" colspan="1" aria-label="コメント"><div class="DataTables_sort_wrapper">コメント<span class="DataTables_sort_icon">
-</span></div></th></tr></thead>
-</table><div class="fg-toolbar ui-toolbar ui-widget-header ui-helper-clearfix ui-corner-bl ui-corner-br"></div></div></div>
-</div>
+<html lang="ja">
+    <head>
+        <title>24k Normal</title>
+        <meta name="bmstable" content="https://actionette.github.io/24ktable/header.json" />
 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Tabulator -->
+        <link href="https://unpkg.com/tabulator-tables@4.2.4/dist/css/bootstrap/tabulator_bootstrap4.min.css" rel="stylesheet" />
+        <style>
+            .btn-circle {
+                width: 70px;
+                height: 70px;
+                padding: 10px 16px;
+                border-radius: 35px;
+                font-size: 24px;
+                line-height: 1.33;
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
 
-</body></html>
+            .tabulator-responsive-collapse dl{
+                margin-bottom: 0;
+            }
+
+            .tabulator-responsive-collapse dl > dd{
+                margin-bottom: 0.25rem;
+            }
+        </style>
+
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+    </head>
+    <body>
+        <div class="container">
+            <div id="table" class="table-sm table-bordered"></div>
+        </div>
+        <div id="bottom_buttons" class="float-right fixed-bottom text-right" style="pointer-events: none;">
+            <button type="button" class="btn btn-primary btn-circle" data-toggle="modal" data-target="#calculator" data-content="音頭計算機" data-placement="top" style="pointer-events: auto;">
+                <i class="fas fa-calculator fa-lg"></i>
+            </button>
+        </div>
+
+        <div class="modal fade" id="calculator" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">音頭計算機</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body embed-responsive" style="padding-top: 60vh;">
+                <iframe src="https://kju8.github.io/ondo_calculator/"  class="embed-responsive-item"></iframe>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.2.4/dist/js/tabulator.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/f839311eea.js"></script>
+    <script>
+        const empty_text = function(text){
+            return !(text && String(text).replace(/&nbsp;|&nbsp/g ,' ').match(/\S/g));
+        }
+
+        $(function(){
+            $("#bottom_buttons button").hover(function() {
+                $(this).popover('show');
+            },
+            function() {
+                $(this).popover('hide');
+            });
+
+            const request = new XMLHttpRequest();
+            request.onload = objs => {
+                const header = JSON.parse(request.responseText);
+                const table = new Tabulator("#table", {
+                    height:"100%",
+                    layout: "fitColumns",
+                    groupBy: "level",
+                    responsiveLayout:"collapse",
+                    responsiveLayoutCollapseStartOpen:false,
+                    groupHeader: function(value, count, data, group){
+                        return `<span>${header.symbol}${value} (${count} pattern)</span>`;
+                    },
+                    columns: [
+                        {formatter:"responsiveCollapse", field:"collapse", width:30, minWidth:30, align:"center", resizable:false, headerSort:false},
+                        { title: "Level", field: "level", width: 100, resizable: false,
+                            formatter: function(cell, formatterParams, onRendered) {
+                                return header.symbol + cell.getValue();
+                            },
+                            sorter:function(a, b, aRow, bRow, column, dir, sorterParams){
+                                if(isNaN(a)) return 1;
+                                if(isNaN(b)) return -1;
+
+                                return a - b;
+                            },
+                        },
+                        { title: "Name", field: "title", minWidth: 1, headerSort:false, resizable: false, variableHeight:true,
+                            formatter: function(cell, formatterParams, onRendered) {
+                                cell.getElement().style.whiteSpace = "pre-wrap";
+                                const value = cell.getValue();
+                                const data = cell.getRow().getData();
+                                const md5 = data.md5;
+                                return `<a href="http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=${md5}" target="_blank">${value}</a>`
+                            },
+                        },
+                        { title: "Artist", field: "artist", minWidth: 100, headerSort:false, resizable: false,
+                            formatter: function(cell, formatterParams, onRendered) {
+                                cell.getElement().style.whiteSpace = "pre-wrap";
+                                const value = cell.getValue();
+                                const data = cell.getRow().getData();
+                                const url = data.url;
+                                if(url){
+                                    return `<a href="${url}" target="_blank">${value}</a>`
+                                }
+                                return value;
+                            },
+                        },
+                        { title: "OND-ize", field: "name_diff", minWidth: 100, headerSort:false, resizable: false,
+                            formatter: function(cell, formatterParams, onRendered) {
+                                cell.getElement().style.whiteSpace = "pre-wrap";
+                                const value = cell.getValue();
+                                const data = cell.getRow().getData();
+                                const url = data.url_diff;
+                                if(url){
+                                    return `<a href="${url}" target="_blank">${value}</a>`
+                                }
+                                return value;
+                            },
+                        },
+                        { title: "Original Title", field: "original_title", minWidth: 10000, headerSort:false, resizable: false},
+                        { title: "BPM Ratio", field: "bpm_ratio", minWidth: 10000, headerSort:false, resizable: false},
+                        { title: "Comment", field: "html_comment", minWidth: 10000, headerSort:false, resizable: false, formatter: "html"},
+                    ],
+                    responsiveLayoutCollapseFormatter:function(data){
+                        //data - an array of objects containing the column title and value for each cell
+                        let list = document.createElement("dl");
+                        list.classList.add('row');
+
+                        data.forEach(function(col){
+                            if(!empty_text(col.value)){
+                                let dtItem = document.createElement("dt");
+                                dtItem.innerHTML = col.title;
+                                dtItem.classList.add('col-sm-2');
+                                let ddItem = document.createElement("dd");
+                                ddItem.innerHTML = col.value;
+                                ddItem.classList.add('col-sm-10');
+                                list.appendChild(dtItem);
+                                list.appendChild(ddItem);
+                            }
+                        });
+
+                        return Object.keys(data).length ? list : "";
+                    },
+                    rowFormatter:function(row){
+                        let data = row.getData();
+
+                        if(empty_text(data.original_title) && empty_text(data.bpm_ratio) && empty_text(data.html_comment)){
+                            row.getCell("collapse").getElement().innerHTML = "";
+                        }
+                    },
+                    groupClick:function(e, group){
+                        group.toggle();
+                    }
+                });
+
+                table.setData("./data.json").catch(function(error){
+                    let requestData = new XMLHttpRequest();
+                    requestData.open("get", "data.json", true);
+                    requestData.onload = objsData => {
+                        table.setData(JSON.parse(requestData.responseText));
+                    }
+                    requestData.setRequestHeader('Pragma', 'no-cache');
+                    requestData.setRequestHeader('Cache-Control', 'no-cache');
+                    requestData.setRequestHeader('If-Modified-Since', 'Thu, 01 Jun 1970 00:00:00 GMT')
+                    requestData.send();
+                });
+
+                $(window).on('load resize', function(){
+                    let rows = table.getRows();
+
+                    rows.forEach(function(row){
+                        row.normalizeHeight();
+                    });
+                });
+            };
+            request.open("get", "header.json", true);
+            request.setRequestHeader('Pragma', 'no-cache');
+            request.setRequestHeader('Cache-Control', 'no-cache');
+            request.setRequestHeader('If-Modified-Since', 'Thu, 01 Jun 1970 00:00:00 GMT')
+            request.send();
+        });
+    </script>
+</html>
