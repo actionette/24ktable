@@ -83,13 +83,13 @@
                                 return a - b;
                             },
                         },
-                        { title: "Name", field: "title", minWidth: 1, headerSort:true, resizable: false, variableHeight:true,
+                        { title: "Title", field: "title", minWidth: 1, headerSort:true, resizable: false, variableHeight:true,
                             formatter: function(cell, formatterParams, onRendered) {
                                 cell.getElement().style.whiteSpace = "pre-wrap";
                                 const value = cell.getValue();
                                 const data = cell.getRow().getData();
                                 const md5 = data.md5;
-                                return `<a href="http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=${md5}" target="_blank">${value}</a>`
+                                return value;
                             },
                         },
                         { title: "Artist", field: "artist", minWidth: 100, headerSort:false, resizable: false,
