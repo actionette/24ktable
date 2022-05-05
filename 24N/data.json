@@ -304,22 +304,6 @@
     "update": "2017-08-26"
   },
   {
-    "level": "10",
-    "sha256": "31f8cede4b5b3dd2d99f2e60d3e9a070ac6fadaaf8d826300addc5a9493a6b82",
-    "title": "サーカス・ギャロップ [normal24]",
-    "artist": "Marc-Andre' Hamelin",
-    "chart": "exclusion",
-    "url": "http://www1.axfc.net/uploader/Ne/so/82875",
-    "tags": [
-
-    ],
-    "url_diff": "https://excln.github.io/sabun/24key/cicus-md.zip",
-    "transpose": 0,
-    "notes": 1280,
-    "comment": "怪我に注意",
-    "update": "2017-12-09"
-  },
-  {
     "level": "6",
     "sha256": "b8e29a549ce3f0298b6119164b253312f8f87934b54605502b8b56196a98416a",
     "title": "雪解け色フラワーズ [24key]",
