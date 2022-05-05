@@ -800,7 +800,7 @@
     display: inline-block;
     box-sizing: border-box;
     max-height: 200px;
-    background: #003977;
+    background: #fff;
     border: 1px solid #dee2e6;
     font-size: 1rem;
     overflow-y: auto;
@@ -811,7 +811,7 @@
     padding: 4px
 }
 .tabulator-edit-select-list .tabulator-edit-select-list-item.active {
-    color: #fff;
+    color: #003977;
     background: #1d68cd
 }
 .tabulator-edit-select-list .tabulator-edit-select-list-item:hover {
