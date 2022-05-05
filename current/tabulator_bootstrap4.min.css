@@ -317,11 +317,11 @@
 .tabulator .tabulator-footer .tabulator-page.active {
     border-color: #007bff;
     background-color: #007bff;
-    color: #fff
+    color: #003977
 }
 .tabulator .tabulator-footer .tabulator-page:disabled {
     border-color: #dee2e6;
-    background: #fff;
+    background: #003977;
     color: #6c757d
 }
 .tabulator .tabulator-footer .tabulator-page:not(.disabled):hover {
@@ -375,7 +375,7 @@
     color: #fff
 }
 .tabulator.table-dark .tabulator-tableHolder {
-    color: #003977
+    color: #fff
 }
 .tabulator.table-dark .tabulator-row {
     border-color: #32383e
