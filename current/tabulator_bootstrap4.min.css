@@ -64,7 +64,7 @@
     width: 100%;
     border: 1px solid #999;
     padding: 1px;
-    background: #ffffff
+    background: #003E82 /*This is for the header of the table. The color it changes to when you hover over it*/
 }
 .tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-arrow {
     display: inline-block;
@@ -364,7 +364,7 @@
 .tabulator.thead-dark .tabulator-header, .tabulator.thead-dark .tabulator-header .tabulator-col {
     border-color: #32383e;
     background-color: #212529;
-    color: #002349
+    color: #ffffff
 }
 .tabulator.table-dark {
     background-color: #212529
