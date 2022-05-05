@@ -811,12 +811,12 @@
     padding: 4px
 }
 .tabulator-edit-select-list .tabulator-edit-select-list-item.active {
-    color: #003977;
+    color: #fff;
     background: #1d68cd
 }
 .tabulator-edit-select-list .tabulator-edit-select-list-item:hover {
     cursor: pointer;
-    color: #fff;
+    color: #003977;
     background: #1d68cd
 }
 .tabulator-edit-select-list .tabulator-edit-select-list-group {
