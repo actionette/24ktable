@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    <head>
+        <title>24k Insane</title>
+        <meta name="bmstable" content="https://actionette.github.io/24ktable/24I/header.json" />
+
+        <link rel="stylesheet" href="https://actionette.github.io/24ktable/24I/resource/bootstrap.min.css">
+        <!-- Tabulator -->
+        <link href="https://actionette.github.io/24ktable/24I/resource/tabulator_bootstrap4.min.css" rel="stylesheet" />
+        <style>
+            .btn-circle {
+                width: 70px;
+                height: 70px;
+                padding: 10px 16px;
+                border-radius: 35px;
+                font-size: 24px;
+                line-height: 1.33;
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+
+            .tabulator-responsive-collapse dl{
+                margin-bottom: 0;
+            }
+
+            .tabulator-responsive-collapse dl > dd{
+                margin-bottom: 0.25rem;
+            }
+        </style>
+
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+    </head>
+    <body>
+        <div class="container">
+            <div id="table" class="table-sm table-bordered"></div>
+        </div>
+        <style>
+            body {
+                background-image: url('https://actionette.github.io/24ktable/insane.png');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+        </style>
+
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.2.4/dist/js/tabulator.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/f839311eea.js"></script>
+    <script>
+        const empty_text = function(text){
+            return !(text && String(text).replace(/&nbsp;|&nbsp/g ,' ').match(/\S/g));
+        }
+
+        $(function(){
+            $("#bottom_buttons button").hover(function() {
+                $(this).popover('show');
+            },
+            function() {
+                $(this).popover('hide');
+            });
+
+            const request = new XMLHttpRequest();
+            request.onload = objs => {
+                const header = JSON.parse(request.responseText);
+                const table = new Tabulator("#table", {
+                    height:"100%",
+                    layout: "fitColumns",
+                    groupBy: "level",
+                    responsiveLayout:"collapse",
+                    responsiveLayoutCollapseStartOpen:false,
+                    groupHeader: function(value, count, data, group){
+                        return `<span>${header.symbol}${value} (${count} Songs)</span>`;
+                    },
+                    columns: [
+                        {formatter:"responsiveCollapse", field:"collapse", width:30, minWidth:30, align:"center", resizable:false, headerSort:false},
+                        { title: "Level", field: "level", width: 100, resizable: false,
+                            formatter: function(cell, formatterParams, onRendered) {
+                                return header.symbol + cell.getValue();
+                            },
+                            sorter:function(a, b, aRow, bRow, column, dir, sorterParams){
+                                if(isNaN(a)) return 1;
+                                if(isNaN(b)) return -1;
+
+                                return a - b;
+                            },
+                        },
+                        { title: "Name", field: "title", minWidth: 1, headerSort:true, resizable: false, variableHeight:true,
+                            formatter: function(cell, formatterParams, onRendered) {
+                                cell.getElement().style.whiteSpace = "pre-wrap";
+                                const value = cell.getValue();
+                                const data = cell.getRow().getData();
+                                const md5 = data.md5;
+                                return value;
+                            },
+                        },
+                        { title: "Artist", field: "artist", minWidth: 100, headerSort:false, resizable: false,
+                            formatter: function(cell, formatterParams, onRendered) {
+                                cell.getElement().style.whiteSpace = "pre-wrap";
+                                const value = cell.getValue();
+                                const data = cell.getRow().getData();
+                                const url = data.url;
+                                if(url){
+                                    return `<a href="${url}" target="_blank">${value}</a>`
+                                }
+                                return value;
+                            },
+                        },
+                        { title: "Difficulty", field: "url",  width:100, minWidth: 100, headerSort:false, resizable: false,
+                            formatter: function(cell, formatterParams, onRendered) {
+                                cell.getElement().style.whiteSpace = "pre-wrap";
+                                const value = cell.getValue();
+                                const data = cell.getRow().getData();
+                                const url = data.url_diff;
+                                if(url){
+                                    return `<a href="${url}" target="_blank">Download</a>`
+                                }
+                                return value;
+                            },
+                        },
+                        { title: "Comment", field: "comment", width:400, minWidth: 400, headerSort:false, resizable: false, 
+                          formatter: function(cell, formatterParams, onRendered) {
+                                cell.getElement().style.whiteSpace = "pre-wrap";
+                                const value = cell.getValue();
+                                const data = cell.getRow().getData();
+                                const url = data.url_diff;
+                                return value;
+                            },
+                        },
+                        { title: "Original Title", field: "original_title", minWidth: 10000, headerSort:false, resizable: false},
+                        { title: "BPM Ratio", field: "bpm_ratio", minWidth: 10000, headerSort:false, resizable: false},
+                    ],
+                    responsiveLayoutCollapseFormatter:function(data){
+                        //data - an array of objects containing the column title and value for each cell
+                        let list = document.createElement("dl");
+                        list.classList.add('row');
+
+                        data.forEach(function(col){
+                            if(!empty_text(col.value)){
+                                let dtItem = document.createElement("dt");
+                                dtItem.innerHTML = col.title;
+                                dtItem.classList.add('col-sm-2');
+                                let ddItem = document.createElement("dd");
+                                ddItem.innerHTML = col.value;
+                                ddItem.classList.add('col-sm-10');
+                                list.appendChild(dtItem);
+                                list.appendChild(ddItem);
+                            }
+                        });
+
+                        return Object.keys(data).length ? list : "";
+                    },
+                    rowFormatter:function(row){
+                        let data = row.getData();
+
+                        if(empty_text(data.original_title) && empty_text(data.bpm_ratio) && empty_text(data.html_comment)){
+                            row.getCell("collapse").getElement().innerHTML = "";
+                        }
+                    },
+                    groupClick:function(e, group){
+                        group.toggle();
+                    }
+                });
+
+                table.setData("./insane-data.json").catch(function(error){
+                    let requestData = new XMLHttpRequest();
+                    requestData.open("get", "insane-data.json", true);
+                    requestData.onload = objsData => {
+                        table.setData(JSON.parse(requestData.responseText));
+                    }
+                    requestData.setRequestHeader('Pragma', 'no-cache');
+                    requestData.setRequestHeader('Cache-Control', 'no-cache');
+                    requestData.setRequestHeader('If-Modified-Since', 'Thu, 01 Jun 1970 00:00:00 GMT')
+                    requestData.send();
+                });
+
+                $(window).on('load resize', function(){
+                    let rows = table.getRows();
+
+                    rows.forEach(function(row){
+                        row.normalizeHeight();
+                    });
+                });
+            };
+            request.open("get", "header.json", true);
+            request.setRequestHeader('Pragma', 'no-cache');
+            request.setRequestHeader('Cache-Control', 'no-cache');
+            request.setRequestHeader('If-Modified-Since', 'Thu, 01 Jun 1970 00:00:00 GMT')
+            request.send();
+        });
+    </script>
+</html>
