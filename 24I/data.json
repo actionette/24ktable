@@ -33,6 +33,38 @@
   },
   {
     "level": "1",
+    "sha256": "ef8aa0a7f630030034801863aba901db43bbf46ee8cf3eb24087811f63df84f9",
+    "title": "The Justice Ray Part II",
+    "artist": "ε &  Q",
+    "chart": "actionette",
+    "url": "https://www.dropbox.com/s/h9tcy1uao6mvela/%5B24key%5D%20The%20Justice%20Ray%20Part%20II.zip?dl=0",
+    "tags": [
+
+    ],
+    "url_diff": "https://www.dropbox.com/s/h9tcy1uao6mvela/%5B24key%5D%20The%20Justice%20Ray%20Part%20II.zip?dl=0",
+    "transpose": 0,
+    "notes": 897,
+    "comment": "",
+    "update": "2022-04-24"
+  },
+  {
+    "level": "6",
+    "sha256": "b5c1eaa111a9db4841a8233a7b6629f927304c03bc43575dfaf1e43f21238d94",
+    "title": "Valkyrie Revolutia [24key Virtuoso]",
+    "artist": "Sakamiya",
+    "chart": "actionette",
+    "url": "http://manbow.nothing.sh/event/event.cgi?action=More_def&num=21&event=119",
+    "tags": [
+
+    ],
+    "url_diff": "https://www.dropbox.com/s/ce6zj0a28nclxgb/%5B24key%5D%20Valkyrie%20Revolutia.zip?dl=0",
+    "transpose": 0,
+    "notes": 1155,
+    "comment": "",
+    "update": "2022-04-24"
+  },
+  {
+    "level": "1",
     "sha256": "116a81c90652a5e171d3319cd9c2653a0d003c7f6afb715e9b8d7eda4aecfaec",
     "title": "kkotipari Hangaduk [24key Virtuoso]",
     "artist": "AcTioneer231",
