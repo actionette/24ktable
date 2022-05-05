@@ -375,7 +375,7 @@
     color: #fff
 }
 .tabulator.table-dark .tabulator-tableHolder {
-    color: #fff
+    color: #003977
 }
 .tabulator.table-dark .tabulator-row {
     border-color: #32383e
@@ -816,7 +816,7 @@
 }
 .tabulator-edit-select-list .tabulator-edit-select-list-item:hover {
     cursor: pointer;
-    color: #003977;
+    color: #fff;
     background: #1d68cd
 }
 .tabulator-edit-select-list .tabulator-edit-select-list-group {
