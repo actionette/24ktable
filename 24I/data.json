@@ -32,6 +32,70 @@
     "update": "2022-04-24"
   },
   {
+    "level": "1",
+    "sha256": "116a81c90652a5e171d3319cd9c2653a0d003c7f6afb715e9b8d7eda4aecfaec",
+    "title": "kkotipari Hangaduk [24key Virtuoso]",
+    "artist": "AcTioneer231",
+    "chart": "actionette",
+    "url": "http://k-bms.com/primrose/",
+    "tags": [
+
+    ],
+    "url_diff": "https://www.dropbox.com/s/znwsr1cy2194fim/%5B24key%5D%20kkotipari%20Hangaduk.rar?dl=0",
+    "transpose": 0,
+    "notes": 1360,
+    "comment": "",
+    "update": "2022-04-24"
+  },
+  {
+    "level": "4",
+    "sha256": "31f8cede4b5b3dd2d99f2e60d3e9a070ac6fadaaf8d826300addc5a9493a6b82",
+    "title": "サーカス・ギャロップ [normal24]",
+    "artist": "Marc-Andre' Hamelin",
+    "chart": "exclusion",
+    "url": "http://www1.axfc.net/uploader/Ne/so/82875",
+    "tags": [
+
+    ],
+    "url_diff": "https://excln.github.io/sabun/24key/cicus-md.zip",
+    "transpose": 0,
+    "notes": 1280,
+    "comment": "",
+    "update": "2017-12-09"
+  },
+  {
+    "level": "9",
+    "sha256": "f399b3e5916626f4a8ee6434907ea7f1363ad64b46d4427bf92de35f19474114",
+    "title": "Modern Times [24K CHALLENGER]",
+    "artist": "Yosk!",
+    "chart": "actionette",
+    "url": "https://venue.bmssearch.net/3/44",
+    "tags": [
+
+    ],
+    "url_diff": "https://www.dropbox.com/s/watq2zg2s9kibr3/%5B24key%5D%20Modern%20Times%20%28by%20Yosk%21%29.zip?dl=0",
+    "transpose": 0,
+    "notes": 705,
+    "comment": "",
+    "update": "2017-12-09"
+  },
+  {
+    "level": "11",
+    "sha256": "054df40d8c04589a2a648ef65a1da047fe7966db06e5197a092accab86f3dc86",
+    "title": "Modern Times [24K Virtuoso]",
+    "artist": "Yosk!",
+    "chart": "actionette",
+    "url": "https://venue.bmssearch.net/3/44",
+    "tags": [
+
+    ],
+    "url_diff": "https://www.dropbox.com/s/watq2zg2s9kibr3/%5B24key%5D%20Modern%20Times%20%28by%20Yosk%21%29.zip?dl=0",
+    "transpose": 0,
+    "notes": 1051,
+    "comment": "",
+    "update": "2017-12-09"
+  },
+  {
     "level": "6",
     "sha256": "f6fa01f8ebd34f2364cf18a325a9d2fad70e290e73d220ab33a1856c595cd988",
     "title": "ミルキーベリー・スウィートタイム [24key LIGHT]",
