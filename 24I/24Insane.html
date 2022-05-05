@@ -169,7 +169,7 @@
 
                 table.setData("./insane-data.json").catch(function(error){
                     let requestData = new XMLHttpRequest();
-                    requestData.open("get", "insane-data.json", true);
+                    requestData.open("get", "data.json", true);
                     requestData.onload = objsData => {
                         table.setData(JSON.parse(requestData.responseText));
                     }
